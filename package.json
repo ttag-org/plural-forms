@@ -1,0 +1,8 @@
+{
+  "name": "plural-forms",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:c-3po-org/plural-forms.git",
+  "author": "a.mostovenko <a.mostovenko@smartweb.com.ua>",
+  "license": "MIT"
+}
