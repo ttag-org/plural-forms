@@ -1,4 +1,4 @@
-import { getFormula, getNPlurals, getPluralFunc } from '../dist/minimal';
+import { getFormula, getNPlurals, getPluralFunc } from '../minimal';
 
 test('test getFormula for en locale', () => {
     expect(getFormula('en')).toBe('n!==1');
