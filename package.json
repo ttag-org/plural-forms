@@ -1,6 +1,6 @@
 {
   "name": "plural-forms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/simple.js",
   "repository": "git@github.com:c-3po-org/plural-forms.git",
   "author": "a.mostovenko <a.mostovenko@smartweb.com.ua>",
@@ -11,7 +11,7 @@
     "build-minimal": "rollup --config ./build/rollup-config-minimal.js",
     "build-normal": "rollup --config ./build/rollup-config.js"
   },
-  "typings":"./plural-forms.d.ts",
+  "typings": "./plural-forms.d.ts",
   "devDependencies": {
     "babel-jest": "^21.2.0",
     "babel-plugin-external-helpers": "^6.22.0",
