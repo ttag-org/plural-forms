@@ -24,7 +24,7 @@ Returns the number of plural forms for locale
 
 **Example**:
 
-```
+```js
 import { getNPlurals } from 'c-3po'
 
 const englishPluralsNumber = getNPlurals('en'); // 2 
@@ -36,7 +36,7 @@ Returns plural form formula for locale
 
 **Example**:
 
-```
+```js
 import { getFormula } from 'c-3po'
 
 const englishPluralsNumber = getFormula('en'); // "n!==1'"
@@ -48,7 +48,7 @@ Returns function that can compute appropriate form for locale
 
 **Example**:
 
-```
+```js
 import { getPluralFunc } from 'c-3po'
 const fn = getPluralFunc('en')
 
