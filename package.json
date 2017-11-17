@@ -1,7 +1,7 @@
 {
   "name": "plural-forms",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.0.1",
+  "main": "dist/minimal",
   "repository": "git@github.com:c-3po-org/plural-forms.git",
   "author": "a.mostovenko <a.mostovenko@smartweb.com.ua>",
   "license": "MIT",
@@ -10,7 +10,6 @@
     "test": "BABEL_ENV=test jest",
     "build-minimal": "rollup --config ./build/rollup-config-minimal.js"
   },
-  "main": "dist/minimal",
   "devDependencies": {
     "babel-jest": "^21.2.0",
     "babel-plugin-external-helpers": "^6.22.0",
