@@ -1,14 +1,15 @@
 {
   "name": "plural-forms",
   "version": "0.0.1",
-  "main": "dist/minimal",
+  "main": "dist/simple.js",
   "repository": "git@github.com:c-3po-org/plural-forms.git",
   "author": "a.mostovenko <a.mostovenko@smartweb.com.ua>",
   "license": "MIT",
   "scripts": {
-    "check": "yarn build-minimal && yarn test",
-    "test": "BABEL_ENV=test jest",
-    "build-minimal": "rollup --config ./build/rollup-config-minimal.js"
+    "test": "yarn run build && BABEL_ENV=test jest",
+    "build": "yarn run build-minimal && yarn run build-normal",
+    "build-minimal": "rollup --config ./build/rollup-config-minimal.js",
+    "build-normal": "rollup --config ./build/rollup-config.js"
   },
   "devDependencies": {
     "babel-jest": "^21.2.0",
