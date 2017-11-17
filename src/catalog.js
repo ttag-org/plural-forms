@@ -1,6 +1,4 @@
-'use strict';
-
-module.exports = {
+export default {
     ach: {
         name: 'Acholi',
         examples: [{

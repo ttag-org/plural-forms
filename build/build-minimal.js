@@ -1,4 +1,5 @@
-const catalogData = require('../src/catalog');
+import catalogData from '../src/catalog';
+
 const pluralRegex = /\splural ?=?([\s\S]*);?/;
 
 function getPluralFunc(pluralsText) {
@@ -18,16 +19,18 @@ function getNPlurals(pluralsText) {
     return parseInt(nplurals, 10);
 }
 
-const minimalData = {};
-
-Object.keys(catalogData).forEach((key) => {
-    const value = catalogData[key];
-    const nPlurals = getNPlurals(value.pluralsText);
-    const formula = getPluralFunc(value.pluralsText)
-        .replace(/\s/g, '')
-        .replace(/^\(/, '')
-        .replace(/\)$/, '');
-    minimalData[key] = `${nPlurals};${formula}`;
-});
-
-console.log(JSON.stringify(minimalData));
+export function getMinimalData() {
+    const minimalData = {};
+    
+    Object.keys(catalogData).forEach((key) => {
+        const value = catalogData[key];
+        const nPlurals = getNPlurals(value.pluralsText);
+        const formula = getPluralFunc(value.pluralsText)
+            .replace(/\s/g, '')
+            .replace(/^\(/, '')
+            .replace(/\)$/, '');
+        minimalData[key] = `${nPlurals};${formula}`;
+    });
+    
+    return minimalData;
+}
