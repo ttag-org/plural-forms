@@ -1,5 +1,5 @@
 import { getFormula, getNPlurals, getPluralFunc, hasLocale,
-    printAvailableLocales, getPluralFormsHeader } from '../dist/simple';
+    printAvailableLocales, getPluralFormsHeader, getExamples } from '../dist/simple';
 
 test('test getFormula for en locale', () => {
     expect(getFormula('en')).toBe('(n !== 1)');
@@ -26,4 +26,8 @@ test('test printAvailableLocales', () => {
 
 test('test getPluralFormsHeader', () => {
     expect(getPluralFormsHeader('en')).toBe('nplurals = 2; plural = (n !== 1)');
+});
+
+test('test getExamples', () => {
+    expect(getExamples('en')).toEqual([{"plural": 0, "sample": 1}, {"plural": 1, "sample": 2}]);
 });

@@ -2094,21 +2094,21 @@ var DATA = {
     }
 };
 
-function getFormula(locale) {
-    return getPluralFuncStr(DATA[locale].pluralsText);
+function getFormula(lang) {
+    return getPluralFuncStr(DATA[lang].pluralsText);
 }
 
-function getNPlurals(locale) {
-    return DATA[locale].nplurals;
+function getNPlurals(lang) {
+    return DATA[lang].nplurals;
 }
 
-function getPluralFunc(locale) {
-    var formula = getFormula(locale);
+function getPluralFunc(lang) {
+    var formula = getFormula(lang);
     return createPluralFunc(formula);
 }
 
-function hasLocale(locale) {
-    return Boolean(DATA[locale]);
+function hasLocale(lang) {
+    return Boolean(DATA[lang]);
 }
 
 function printAvailableLocales() {
@@ -2125,8 +2125,12 @@ function printAvailableLocales() {
     return strResult;
 }
 
-function getPluralFormsHeader(locale) {
-    return DATA[locale].pluralsText;
+function getPluralFormsHeader(lang) {
+    return DATA[lang].pluralsText;
+}
+
+function getExamples(lang) {
+    return DATA[lang].examples;
 }
 
 exports.getFormula = getFormula;
@@ -2135,3 +2139,4 @@ exports.getPluralFunc = getPluralFunc;
 exports.hasLocale = hasLocale;
 exports.printAvailableLocales = printAvailableLocales;
 exports.getPluralFormsHeader = getPluralFormsHeader;
+exports.getExamples = getExamples;

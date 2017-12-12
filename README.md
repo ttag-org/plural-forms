@@ -56,3 +56,13 @@ fn(1, ['banana', 'bananas']) // 'banana'
 fn(2, ['banana', 'bananas']) // 'bananas'
 ```
 
+### getExamples(locale: string) : function
+* *locale* - language ISO code.
+Returns examples for the plural forms
+
+**Example**:
+
+```js
+import { getExamples } from 'c-3po'
+const ex = getExamples('en') // [{"plural": 0, "sample": 1}, {"plural": 1, "sample": 2}]
+```

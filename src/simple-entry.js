@@ -1,21 +1,21 @@
 import { createPluralFunc, getPluralFuncStr } from './lib';
 import DATA from './catalog';
 
-export function getFormula(locale) {
-    return getPluralFuncStr(DATA[locale].pluralsText);
+export function getFormula(lang) {
+    return getPluralFuncStr(DATA[lang].pluralsText);
 }
 
-export function getNPlurals(locale) {
-    return DATA[locale].nplurals;
+export function getNPlurals(lang) {
+    return DATA[lang].nplurals;
 }
 
-export function getPluralFunc(locale) {
-    const formula = getFormula(locale);
+export function getPluralFunc(lang) {
+    const formula = getFormula(lang);
     return createPluralFunc(formula);
 }
 
-export function hasLocale(locale) {
-    return Boolean(DATA[locale]);
+export function hasLocale(lang) {
+    return Boolean(DATA[lang]);
 }
 
 export function printAvailableLocales(silent=false) {
@@ -30,6 +30,10 @@ export function printAvailableLocales(silent=false) {
     return strResult;
 }
 
-export function getPluralFormsHeader(locale) {
-    return DATA[locale].pluralsText;
+export function getPluralFormsHeader(lang) {
+    return DATA[lang].pluralsText;
+}
+
+export function getExamples(lang) {
+    return DATA[lang].examples;
 }
