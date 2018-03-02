@@ -14,20 +14,12 @@ export function getPluralFunc(locale) {
     return createPluralFunc(formula);
 }
 
-export function hasLocale(locale) {
+export function hasLang(locale) {
     return Boolean(DATA[locale]);
 }
 
-export function printAvailableLocales(silent=false) {
-    const result = [];
-    Object.keys(DATA).forEach((locale) => {
-        result.push(`${DATA[locale].name} - ${locale}`)
-    });
-    const strResult = result.join('\n');
-    if (!silent) {
-        process.stdout.write(strResult);
-    }
-    return strResult;
+export function getAvailLangs() {
+    return Object.keys(DATA);
 }
 
 export function getPluralFormsHeader(locale) {

@@ -18,8 +18,8 @@ const englishPluralsNumber = getNPlurals('en'); // 2
 
 ## Available methods
 
-### getNPlurals(locale: string): number
-* *locale* - language ISO code.
+### getNPlurals(language: string): number
+* *language* - language ISO code.
 Returns the number of plural forms for locale
 
 **Example**:
@@ -30,8 +30,8 @@ import { getNPlurals } from 'c-3po'
 const englishPluralsNumber = getNPlurals('en'); // 2 
 ```
 
-### getFormula(locale: string) : string
-* *locale* - language ISO code.
+### getFormula(language: string) : string
+* *language* - language ISO code.
 Returns plural form formula for locale
 
 **Example**:
@@ -42,8 +42,8 @@ import { getFormula } from 'c-3po'
 const englishPluralsNumber = getFormula('en'); // "n!==1'"
 ```
 
-### getPluralFunc(locale: string) : function
-* *locale* - language ISO code.
+### getPluralFunc(language: string) : function
+* *language* - language ISO code.
 Returns function that can compute appropriate form for locale
 
 **Example**:
@@ -56,3 +56,24 @@ fn(1, ['banana', 'bananas']) // 'banana'
 fn(2, ['banana', 'bananas']) // 'bananas'
 ```
 
+### hasLang(language: string): boolean
+* *language* - language ISO code
+Returns if language definition exists in catalog
+
+**Example**:
+
+```js
+import { hasLang } from 'c-3po'
+hasLang('en') // true
+hasLang('zzz') // false
+```
+
+## getAvailLangs(): [string]
+Returns list with all existing ISO codes of languages from the catalog.
+
+**Example**
+
+```js
+import { getAvailLangs } from 'c-3po';
+getAvailLangs() // [en, uk, ...]
+```

@@ -15,3 +15,11 @@ export function getPluralFunc(locale) {
     const formula = getFormula(locale);
     return createPluralFunc(formula);
 }
+
+export function hasLang(locale) {
+    return Boolean(DATA[locale]);
+}
+
+export function getAvailLangs() {
+    return Object.keys(DATA);
+}

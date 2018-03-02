@@ -2107,22 +2107,12 @@ function getPluralFunc(locale) {
     return createPluralFunc(formula);
 }
 
-function hasLocale(locale) {
+function hasLang(locale) {
     return Boolean(DATA[locale]);
 }
 
-function printAvailableLocales() {
-    var silent = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-
-    var result = [];
-    Object.keys(DATA).forEach(function (locale) {
-        result.push(DATA[locale].name + ' - ' + locale);
-    });
-    var strResult = result.join('\n');
-    if (!silent) {
-        process.stdout.write(strResult);
-    }
-    return strResult;
+function getAvailLangs() {
+    return Object.keys(DATA);
 }
 
 function getPluralFormsHeader(locale) {
@@ -2132,6 +2122,6 @@ function getPluralFormsHeader(locale) {
 exports.getFormula = getFormula;
 exports.getNPlurals = getNPlurals;
 exports.getPluralFunc = getPluralFunc;
-exports.hasLocale = hasLocale;
-exports.printAvailableLocales = printAvailableLocales;
+exports.hasLang = hasLang;
+exports.getAvailLangs = getAvailLangs;
 exports.getPluralFormsHeader = getPluralFormsHeader;
