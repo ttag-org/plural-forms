@@ -6,8 +6,8 @@
   "author": "a.mostovenko <a.mostovenko@smartweb.com.ua>",
   "license": "MIT",
   "scripts": {
-    "test": "yarn run build && BABEL_ENV=test jest",
-    "build": "yarn run build-minimal && yarn run build-normal",
+    "test": "npm run build && BABEL_ENV=test jest",
+    "build": "npm run build-minimal && npm run build-normal",
     "build-minimal": "rollup --config ./build/rollup-config-minimal.js",
     "build-normal": "rollup --config ./build/rollup-config.js"
   },

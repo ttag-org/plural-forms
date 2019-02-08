@@ -1,12 +1,14 @@
-import { createPluralFunc, getPluralFuncStr } from './lib';
+import { createPluralFunc, getPluralFuncStr, tryGetLangData } from './lib';
 import DATA from './catalog';
 
 export function getFormula(locale) {
-    return getPluralFuncStr(DATA[locale].pluralsText);
+    const data = tryGetLangData(locale, DATA);
+    return getPluralFuncStr(data.pluralsText);
 }
 
 export function getNPlurals(locale) {
-    return DATA[locale].nplurals;
+    const data = tryGetLangData(locale, DATA);
+    return data.nplurals;
 }
 
 export function getPluralFunc(locale) {
@@ -15,7 +17,12 @@ export function getPluralFunc(locale) {
 }
 
 export function hasLang(locale) {
-    return Boolean(DATA[locale]);
+    try {
+        tryGetLangData(locale, DATA);
+        return true;
+    } catch (err) {
+        return false;
+    }
 }
 
 export function getAvailLangs() {
@@ -23,5 +30,6 @@ export function getAvailLangs() {
 }
 
 export function getPluralFormsHeader(locale) {
-    return DATA[locale].pluralsText;
+    const data = tryGetLangData(locale, DATA);
+    return data.pluralsText;
 }

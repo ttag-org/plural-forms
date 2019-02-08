@@ -1,14 +1,16 @@
 
-import { createPluralFunc } from './lib';
+import { createPluralFunc, tryGetLangData } from './lib';
 
 const DATA = CATALOG_DATA;
 
 export function getFormula(locale) {
-    return DATA[locale].split(';')[1];
+    const data = tryGetLangData(locale, DATA);
+    return data.split(';')[1];
 }
 
 export function getNPlurals(locale) {
-    return parseInt(DATA[locale].split(';')[0], 10);
+    const data = tryGetLangData(locale, DATA);
+    return parseInt(data.split(';')[0], 10);
 }
 
 export function getPluralFunc(locale) {
@@ -17,7 +19,12 @@ export function getPluralFunc(locale) {
 }
 
 export function hasLang(locale) {
-    return Boolean(DATA[locale]);
+    try {
+        tryGetLangData(locale, DATA);
+        return true;
+    } catch (err) {
+        return false;
+    }
 }
 
 export function getAvailLangs() {
