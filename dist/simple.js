@@ -6,6 +6,17 @@ function pluralFnBody(pluralStr) {
     return 'return args[+ (' + pluralStr + ')];';
 }
 
+var localeRegExp = /(\w+)[-_].*/;
+
+function tryGetLangData(rawLang, catalog) {
+    if (catalog[rawLang]) return catalog[rawLang];
+    var match = rawLang.match(localeRegExp);
+    if (!match) {
+        throw new Error('Can\'t find lang or lcale with code ' + rawLang);
+    }
+    return catalog[match[1]];
+}
+
 var fnCache = {};
 function createPluralFunc(pluralStr) {
     var fn = fnCache[pluralStr];
@@ -2095,11 +2106,13 @@ var DATA = {
 };
 
 function getFormula(locale) {
-    return getPluralFuncStr(DATA[locale].pluralsText);
+    var data = tryGetLangData(locale, DATA);
+    return getPluralFuncStr(data.pluralsText);
 }
 
 function getNPlurals(locale) {
-    return DATA[locale].nplurals;
+    var data = tryGetLangData(locale, DATA);
+    return data.nplurals;
 }
 
 function getPluralFunc(locale) {
@@ -2108,7 +2121,12 @@ function getPluralFunc(locale) {
 }
 
 function hasLang(locale) {
-    return Boolean(DATA[locale]);
+    try {
+        tryGetLangData(locale, DATA);
+        return true;
+    } catch (err) {
+        return false;
+    }
 }
 
 function getAvailLangs() {
@@ -2116,7 +2134,8 @@ function getAvailLangs() {
 }
 
 function getPluralFormsHeader(locale) {
-    return DATA[locale].pluralsText;
+    var data = tryGetLangData(locale, DATA);
+    return data.pluralsText;
 }
 
 exports.getFormula = getFormula;

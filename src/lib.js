@@ -2,6 +2,17 @@ function pluralFnBody(pluralStr) {
     return `return args[+ (${pluralStr})];`;
 }
 
+const localeRegExp = /(\w+)[-_].*/
+
+export function tryGetLangData(rawLang, catalog) {
+    if (catalog[rawLang]) return catalog[rawLang];
+    const match = rawLang.match(localeRegExp)
+    if (!match) {
+        throw new Error(`Can't find lang or lcale with code ${rawLang}`);
+    }
+    return catalog[match[1]];
+}
+
 const fnCache = {};
 export function createPluralFunc(pluralStr) {
     let fn = fnCache[pluralStr];
