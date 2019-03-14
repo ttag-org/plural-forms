@@ -1,15 +1,15 @@
 import { getFormula, getNPlurals, getPluralFunc, hasLang, getAvailLangs } from '../minimal';
 
 test('test getFormula for en locale', () => {
-    expect(getFormula('en')).toBe('n!==1');
+    expect(getFormula('en')).toBe('n!=1');
 });
 
 test('test getFormula for en_US locale', () => {
-    expect(getFormula('en_US')).toBe('n!==1');
+    expect(getFormula('en_US')).toBe('n!=1');
 });
 
 test('test getFormula for en-US locale', () => {
-    expect(getFormula('en-US')).toBe('n!==1');
+    expect(getFormula('en-US')).toBe('n!=1');
 });
 
 test('test getNPlurals for en locale', () => {
