@@ -11,7 +11,7 @@ npm install --save plural-forms
 
 ## Usage example
 ```js
-import { getNPlurals } from 'c-3po'
+import { getNPlurals } from 'plural-forms'
 
 const englishPluralsNumber = getNPlurals('en'); // 2 
 ```
@@ -25,7 +25,7 @@ Returns the number of plural forms for locale
 **Example**:
 
 ```js
-import { getNPlurals } from 'c-3po'
+import { getNPlurals } from 'plural-forms'
 
 const englishPluralsNumber = getNPlurals('en'); // 2 
 ```
@@ -37,7 +37,7 @@ Returns plural form formula for locale
 **Example**:
 
 ```js
-import { getFormula } from 'c-3po'
+import { getFormula } from 'plural-forms'
 
 const englishPluralsNumber = getFormula('en'); // "n!==1'"
 ```
@@ -49,7 +49,7 @@ Returns function that can compute appropriate form for locale
 **Example**:
 
 ```js
-import { getPluralFunc } from 'c-3po'
+import { getPluralFunc } from 'plural-forms'
 const fn = getPluralFunc('en')
 
 fn(1, ['banana', 'bananas']) // 'banana'
@@ -63,7 +63,7 @@ Returns if language definition exists in catalog
 **Example**:
 
 ```js
-import { hasLang } from 'c-3po'
+import { hasLang } from 'plural-forms'
 hasLang('en') // true
 hasLang('zzz') // false
 ```
@@ -74,6 +74,6 @@ Returns list with all existing ISO codes of languages from the catalog.
 **Example**
 
 ```js
-import { getAvailLangs } from 'c-3po';
+import { getAvailLangs } from 'plural-forms';
 getAvailLangs() // [en, uk, ...]
 ```
