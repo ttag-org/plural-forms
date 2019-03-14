@@ -2,15 +2,15 @@ import { getFormula, getNPlurals, getPluralFunc, hasLang,
     getAvailLangs, getPluralFormsHeader } from '../dist/simple';
 
 test('test getFormula for en locale', () => {
-    expect(getFormula('en')).toBe('(n !== 1)');
+    expect(getFormula('en')).toBe('(n != 1)');
 });
 
 test('test getFormula for en_US locale', () => {
-    expect(getFormula('en_US')).toBe('(n !== 1)');
+    expect(getFormula('en_US')).toBe('(n != 1)');
 });
 
 test('test getFormula for en-US locale', () => {
-    expect(getFormula('en-US')).toBe('(n !== 1)');
+    expect(getFormula('en-US')).toBe('(n != 1)');
 });
 
 test('test getNPlurals for en_US locale', () => {
@@ -49,13 +49,13 @@ test('test getAvailLangs', () => {
 });
 
 test('test getPluralFormsHeader', () => {
-    expect(getPluralFormsHeader('en')).toBe('nplurals = 2; plural = (n !== 1)');
+    expect(getPluralFormsHeader('en')).toBe('nplurals = 2; plural = (n != 1)');
 });
 
 test('test getPluralFormsHeader for locale en_US', () => {
-    expect(getPluralFormsHeader('en_US')).toBe('nplurals = 2; plural = (n !== 1)');
+    expect(getPluralFormsHeader('en_US')).toBe('nplurals = 2; plural = (n != 1)');
 });
 
 test('test getPluralFormsHeader for locale en-US', () => {
-    expect(getPluralFormsHeader('en-US')).toBe('nplurals = 2; plural = (n !== 1)');
+    expect(getPluralFormsHeader('en-US')).toBe('nplurals = 2; plural = (n != 1)');
 });
