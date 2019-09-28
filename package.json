@@ -1,6 +1,6 @@
 {
   "name": "plural-forms",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "main": "dist/simple.js",
   "repository": "git@github.com:c-3po-org/plural-forms.git",
   "author": "a.mostovenko <a.mostovenko@smartweb.com.ua>",
