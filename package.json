@@ -7,9 +7,10 @@
   "license": "MIT",
   "scripts": {
     "test": "npm run build && BABEL_ENV=test jest",
-    "build": "npm run build-minimal && npm run build-normal",
+    "build": "npm run build-minimal && npm run build-normal && npm run build-minimal-safe",
     "build-minimal": "rollup --config ./build/rollup-config-minimal.js",
-    "build-normal": "rollup --config ./build/rollup-config.js"
+    "build-normal": "rollup --config ./build/rollup-config.js",
+    "build-minimal-safe": "node build/build-minimal-safe.js && rollup --config ./build/rollup-config-minimal-safe.js"
   },
   "typings": "./plural-forms.d.ts",
   "devDependencies": {
