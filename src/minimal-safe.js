@@ -4,51 +4,49 @@ function moreThan1(n) {
     return (n > 1);
 }
 
+function not1(n) {
+    return (n !== 1);
+}
+
+function zero(n) {
+    return 0;
+}
+
 const DATA = {
     ach: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     af: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ak: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     am: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     an: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ar: {
         
@@ -64,36 +62,28 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     ast: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ay: {
-        name: 'Aymará',
+        
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     az: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     be: {
         
@@ -109,45 +99,35 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     bn: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     bo: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     br: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     brx: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     bs: {
         
@@ -163,18 +143,14 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     cgg: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     cs: {
         
@@ -208,162 +184,126 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     de: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     doi: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     dz: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     el: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     en: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     eo: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     es: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     et: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     eu: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     fa: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     ff: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     fi: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     fil: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     fo: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     fr: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     fur: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     fy: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ga: {
         
@@ -375,7 +315,7 @@ const DATA = {
         }
     },
     gd: {
-        name: 'Scottish Gaelic',
+        
         
         n: 4,
         
@@ -388,63 +328,49 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     gu: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     gun: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     ha: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     he: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     hi: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     hne: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     hr: {
         
@@ -460,27 +386,21 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     hy: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     id: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     is: {
         
@@ -496,27 +416,21 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ja: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     jbo: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     jv: {
         
@@ -532,54 +446,42 @@ const DATA = {
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     kk: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     km: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     kn: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ko: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     ku: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     kw: {
         
@@ -595,36 +497,28 @@ const DATA = {
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     lb: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ln: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     lo: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     lt: {
         
@@ -649,36 +543,28 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     mfe: {
-        name: 'Mauritian Creole',
+        
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     mg: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     mi: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     mk: {
         
@@ -694,27 +580,21 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     mn: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     mni: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     mnk: {
         
@@ -730,18 +610,14 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ms: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     mt: {
         
@@ -757,117 +633,91 @@ const DATA = {
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     nah: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     nap: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     nb: {
-        name: 'Norwegian Bokmal',
+        
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ne: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     nl: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     nn: {
-        name: 'Norwegian Nynorsk',
+        
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     no: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     nso: {
-        name: 'Northern Sotho',
+        
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     oc: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     or: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     pa: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     pap: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     pl: {
         
@@ -883,36 +733,28 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ps: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     pt: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     rm: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ro: {
         
@@ -937,63 +779,49 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sah: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     sat: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sco: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sd: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     se: {
-        name: 'Northern Sami',
+        
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     si: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sk: {
         
@@ -1018,27 +846,21 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     son: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sq: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sr: {
         
@@ -1054,108 +876,84 @@ const DATA = {
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     sv: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     sw: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     ta: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     te: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     tg: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     th: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     ti: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     tk: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     tr: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     tt: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     ug: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     uk: {
         
@@ -1171,63 +969,49 @@ const DATA = {
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     uz: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     vi: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     wa: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n > 1);
-        }
+        f: moreThan1
     },
     wo: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     },
     yo: {
         
         
         n: 2,
         
-        f: function(n) {
-            return (n !== 1);
-        }
+        f: not1
     },
     zh: {
         
         
         n: 1,
         
-        f: function() {
-            return 0;
-        }
+        f: zero
     }
 };
 

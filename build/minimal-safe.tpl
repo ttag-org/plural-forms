@@ -4,6 +4,14 @@ function moreThan1(n) {
     return (n > 1);
 }
 
+function not1(n) {
+    return (n !== 1);
+}
+
+function zero(n) {
+    return 0;
+}
+
 const DATA = CATALOG_DATA;
 
 export function getNPlurals(locale) {

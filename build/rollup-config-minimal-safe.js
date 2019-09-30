@@ -11,6 +11,8 @@ export default {
         babel({
             exclude: 'node_modules/**'
         }),
-        uglify(),
+        uglify({
+            mangle: { toplevel: true }
+        }),
     ]
 };
