@@ -7,7 +7,6 @@ function moreThan1(n) {
 const DATA = CATALOG_DATA;
 
 export function getNPlurals(locale) {
-    console.log(locale);
     const langData = tryGetLangData(locale, DATA);
     return langData.n
 }
