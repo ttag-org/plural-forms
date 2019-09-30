@@ -1232,7 +1232,6 @@ const DATA = {
 };
 
 export function getNPlurals(locale) {
-    console.log(locale);
     const langData = tryGetLangData(locale, DATA);
     return langData.n
 }
