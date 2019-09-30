@@ -1,4 +1,4 @@
-import { getNPlurals, getPluralFunc, hasLang, getAvailLangs } from '../minimal';
+import { getNPlurals, getPluralFunc, hasLang, getAvailLangs } from '../minimal-safe';
 
 
 test('test getNPlurals for en locale', () => {
