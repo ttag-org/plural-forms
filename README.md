@@ -78,7 +78,7 @@ import { getAvailLangs } from 'plural-forms';
 getAvailLangs() // [en, uk, ...]
 ```
 
-## getExamples(): [{ plural: number, sample: number}]
+## getExamples(language: string): [{ plural: number, sample: number}]
 Returns list with examples for plurals.
 
 **Example**
