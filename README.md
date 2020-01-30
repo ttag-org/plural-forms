@@ -77,3 +77,16 @@ Returns list with all existing ISO codes of languages from the catalog.
 import { getAvailLangs } from 'plural-forms';
 getAvailLangs() // [en, uk, ...]
 ```
+
+## getExamples(): [{ plural: number, sample: number}]
+Returns list with examples for plurals.
+
+**Example**
+
+```js
+import { getExamples } from 'plural-forms';
+getExamples('uk')
+// [ { plural: 0, sample: 1 },
+//   { plural: 1, sample: 2 },
+//   { plural: 2, sample: 5 } ]
+```

@@ -2138,9 +2138,15 @@ function getPluralFormsHeader(locale) {
     return data.pluralsText;
 }
 
+function getExamples(locale) {
+    var data = tryGetLangData(locale, DATA);
+    return data.examples;
+}
+
 exports.getFormula = getFormula;
 exports.getNPlurals = getNPlurals;
 exports.getPluralFunc = getPluralFunc;
 exports.hasLang = hasLang;
 exports.getAvailLangs = getAvailLangs;
 exports.getPluralFormsHeader = getPluralFormsHeader;
+exports.getExamples = getExamples;

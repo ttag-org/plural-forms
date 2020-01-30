@@ -33,3 +33,8 @@ export function getPluralFormsHeader(locale) {
     const data = tryGetLangData(locale, DATA);
     return data.pluralsText;
 }
+
+export function getExamples(locale) {
+    const data = tryGetLangData(locale, DATA);
+    return data.examples;
+}
