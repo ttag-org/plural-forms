@@ -4,3 +4,4 @@ export declare function getPluralFunc(locale: string): string;
 export declare function hasLang(locale: string): boolean; 
 export declare function getPluralFormsHeader(locale: string): string;
 export declare function getAvailLangs(): [string];
+export declare function getExamples(locale:string): {plural: number, sample: number}[];
