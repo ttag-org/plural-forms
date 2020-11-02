@@ -448,6 +448,13 @@ const DATA = {
         
         f: zero
     },
+    kab: {
+        
+        
+        n: 2,
+        
+        f: not1
+    },
     kk: {
         
         
@@ -1013,7 +1020,8 @@ const DATA = {
         
         f: zero
     }
-};
+}
+;
 
 export function getNPlurals(locale) {
     const langData = tryGetLangData(locale, DATA);
