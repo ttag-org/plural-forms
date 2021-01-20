@@ -579,9 +579,9 @@ export default {
             sample: 2
         }],
         nplurals: 2,
-        pluralsText: 'nplurals = 2; plural = (n > 1)',
+        pluralsText: 'nplurals = 2; plural = (n <= -2 || n >= 2)',
         pluralsFunc: function(n) {
-            return (n > 1);
+            return n <= -2 || n >= 2;
         }
     },
     fur: {
