@@ -925,11 +925,14 @@ export default {
         examples: [{
             plural: 0,
             sample: 1
+        }, {
+            plural: 1,
+            sample: 2
         }],
-        nplurals: 1,
-        pluralsText: 'nplurals = 1; plural = 0',
-        pluralsFunc: function() {
-            return 0;
+        nplurals: 2,
+        pluralsText: 'nplurals = 2; plural = (n != 1)',
+        pluralsFunc: function(n) {
+            return (n !== 1);
         }
     },
     km: {
