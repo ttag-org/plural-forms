@@ -289,7 +289,9 @@ const DATA = {
         
         n: 2,
         
-        f: moreThan1
+        f: function(n) {
+            return n <= -2 || n >= 2;
+        }
     },
     fur: {
         
@@ -458,9 +460,9 @@ const DATA = {
     kk: {
         
         
-        n: 1,
+        n: 2,
         
-        f: zero
+        f: not1
     },
     km: {
         
